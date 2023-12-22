@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="img"
+      href="https://coreui.io/images/templates/coreui_free_1440.webp"
+    />
+    <link rel="stylesheet" href="../style.css">
+    <title>Đăng Nhập</title>
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="Header text-dark">
+        <div class="top_header text-dark py-1">
+          <div class="d-flex justify-content-between align-items-center container">
+            <div class="header_location d-flex align-items-center">
+              <span class="pe-3">
+                <i class="fa-solid fa-location-dot"></i>
+                336/130 Phan Văn Trị, P11, Q.BT
+              </span>
+              <span class="pe-3">
+                <i class="fa-solid fa-phone"></i>
+                0978568445
+              </span>
+            </div>
+            <div class="header_social align-middle">
+              <a class="align-middle" href=""><i class="fs-5 text-dark ps-2 fa-brands fa-facebook-f"></i></a>
+              <a class="align-middle" href=""><i class="fs-5 text-dark ps-2 fa-brands fa-instagram"></i></a>
+              <a class="align-middle" href=""><i class="fs-5 text-dark ps-2 fa-brands fa-twitter"></i></a>
+            </div>
+          </div> 
+        </div>
+  
+        <div class="masthead py-4">
+          <div class="container d-flex justify-content-between align-items-center w-100">
+            <a href="index.html"><img class="bg-dark" src="http://mauweb.monamedia.net/donghohaitrieu/wp-content/uploads/2019/07/logo-mona-2.png" alt=""/></a>
+            <form action="" class=" w-50">
+              <div class="btn-group w-100 form-control" role="group" aria-label="Basic radio toggle button group" >
+                <input type="text" class="rounded-0 border-0 w-100" />
+                <button type="submit" class="btn btn-light">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </form>
+  
+          <div class="d-inline-flex px-2 text-dark">
+            <div class="ps-4">
+              <a href="signin.html" class="list-group-item fw-medium">ĐĂNG NHẬP</a>
+            </div>
+            <div class="ps-4">
+              <a href="" class="list-group-item "
+                ><i class="fa-solid fa-heart"></i
+              ></a>
+            </div>
+            <div class="ps-4">
+              <a href="" class="list-group-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary" id="totalCart">4
+                </span>
+              </a>
+              <!-- Cart -->
+              <div class="offcanvas offcanvas-end w-25" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasRightLabel">SHOPPING CART</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <table class="table text-center ">
+                    <thead>
+                      <tr>
+                        <th>STT</th>
+                        <th>HÌNH ẢNH</th>
+                        <th>SỐ LƯỢNG</th>
+                        <th>ĐƠN GIÁ</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody class="align-items-center">
+                      <tr>
+                            <th class="align-middle">1</th>
+                            <td class="align-middle"><img src="" alt=""></td>
+                        <td class="align-middle">
+                          <div class="button-group">
+                            <button type="button" class="btn border-0 align-middle " id="minus-cart" onclick="minusCart()">-</button>
+                            <span class="align-middle" id="quantity-cart">1</span>
+                            <button type="button" class="btn border-0 align-middle " id="plus-cart" onclick="plusCart()">+</button>
+                          </div>
+                        </td>
+                        <td class="align-middle" id="price">35.000 VND</td>
+                        <td class="align-middle"><button class="btn btn-danger">Xoá</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="offcanvas-footer text-start p-2">
+                  <table class="table border-1 ">
+                    <tr>
+                      <th class="h5">Tổng: </th>
+                      <td class="fs-5 text-end" id="totalProduct">4</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="bottom_head py-3 text-dark">
+        <div class="container w-100">
+          <div class="d-flex flex-row justify-content-around align-items-center">
+            <a class="link-underline link-underline-opacity-0 text-dark fw-medium" href="../index.html">TRANG CHỦ</a>
+            <a class="link-underline link-underline-opacity-0 text-dark fw-medium" href="navbar-pages/intro.html">GIỚI THIỆU</a>
+            <div class="dropdown">
+              <a class="btn text-dark fw-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                SẢN PHẨM
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+            <a class=" link-underline link-underline-opacity-0 text-dark  fw-medium" href="../navbar-pages/img.html">HÌNH ẢNH</a>
+            <a class=" link-underline link-underline-opacity-0 text-dark  fw-medium" href="../navbar-pages/blogs.html">BLOGS</a>
+            <a class=" link-underline link-underline-opacity-0 text-dark  fw-medium" href="../navbar-pages/contact.html">LIÊN HỆ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav aria-label="breadcrumb" style="background-color: rgba(226, 222, 222, 0.748);">
+      <div class="container">
+        <ol class="breadcrumb pt-3 pb-0 mb-0">
+          <li class="breadcrumb-item"><a href="../index.html" class="link-underline link-underline-opacity-0">Trang chủ</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Đăng ký</li>
+        </ol>
+      </div>
+    </nav>
+    <!-- Main -->
+    <div class="main w-100 py-5" style="background-color: rgba(226, 222, 222, 0.748);">
+      <div class="container d-flex align-items-center justify-content-around">
+        <div class="form w-50">
+            <form class="form-control p-5" action="" method="post">
+                <h2>Đăng ký</h2>
+                <div class="form-group mb-3">
+                    <label class="form-label" for="user">Họ tên</label>
+                    <input class="form-control" type="text" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label" for="email">Email:</label>
+                    <input class="form-control" type="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label" for="password">Mật khẩu:</label>
+                    <input class="form-control" type="password" required>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary form-label">Đăng ký</button>
+                </div>
+                <div class="form-group">
+                    <label for="signin">Bạn đã có tài khoản</label>
+                    <strong><a href="signin.html">Đăng nhập</a></strong>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class=" pt-3" id="footer list-group-item">
+      <div class="container my-5">
+        <div class="content_footer d-flex justify-content-between align-top text-dark">
+          <div class="ctf_1 w-50">
+            <a href="../index.html"><img
+              src="https://www.shutterstock.com/shutterstock/photos/588247121/display_1500/stock-vector-chocolate-handwritten-lettering-logo-emblem-badge-or-label-with-cocoa-bean-modern-brush-588247121.jpg"
+              class="w-50"
+              alt=""
+            /></a>
+          </div>
+          <div class="ctf_2 w-50">
+            <h3>THÔNG TIN LIÊN HỆ</h3>
+            <li class="list-group-item"><strong>Địa chỉ: </strong>336/130 Phan Van Tri, P.11, Q.BT, Tp.HCM</li>
+            <li class="list-group-item"><strong>Điện thoại: </strong>0978568445</li>
+            <li class="list-group-item"><strong>Hotline: </strong></li>
+            <li class="list-group-item">
+              <strong>Email: </strong> <a class="link-underline link-underline-opacity-0 text-dark" href="">dinhlt2701@gmail.com</a>
+            </li>
+            <li class="list-group-item">
+              <strong>Website: </strong>
+              <a class="link-underline link-underline-opacity-0 text-dark" href="http://localhost:8080">http://localhost:8080</a>
+            </li>
+          </div>
+          <div class="ctf_3 w-50 ps-5">
+            <h3>GIỚI THIỆU</h3>
+            <li class="list-group-item "><a class="text-dark link-underline link-underline-opacity-0" href="">Về chúng tôi</a></li>
+            <li class="list-group-item "><a class="text-dark link-underline link-underline-opacity-0" href="">Hướng dẫn thanh toán</a></li>
+            <li class="list-group-item "><a class="text-dark link-underline link-underline-opacity-0" href="">Hướng dẫn đặt tour</a></li>
+            <li class="list-group-item "><a class="text-dark link-underline link-underline-opacity-0" href="list-tour.html">Bảng giá</a></li>
+            <li class="list-group-item "><a class="text-dark link-underline link-underline-opacity-0" href="">Tour khuyến mãi</a></li>
+          </div>
+          <div class="ctf_4 w-50">
+            <h3>CHÍNH SÁCH</h3>
+            <li class="list-group-item">
+              <a class="text-dark link-underline link-underline-opacity-0" href="">Chính sách bảo mật</a>
+            </li>
+            <li class="list-group-item">
+              <a class="text-dark link-underline link-underline-opacity-0" href="">Điều khoản chung</a>
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="copyright text-dark py-3  border-top">
+        <div class="text-center">
+          Copyright © 2020 <strong>Lê Tất Định</strong>. All rights
+          reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="index.js">
+      
+    </script>
+  </body>
+</html>

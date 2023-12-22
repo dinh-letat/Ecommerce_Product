@@ -1,0 +1,27 @@
+* {
+    font-size: 14px;
+}
+
+img {
+    width: 200px;
+}
+
+input {
+    outline: none;
+}
+
+.offcanvas-body {
+    font-size: 10px;
+}
+.masthead{
+    border-top: 1px solid rgba(214, 211, 211, 0.658);
+    border-bottom: 1px solid rgba(214, 211, 211, 0.658);
+}
+.bottom_head{
+    border-bottom: 1px solid rgba(214, 211, 211, 0.658);
+}
+main {
+    height: 100vh;
+    background-color: rgba(226, 222, 222, 0.748);
+}
+
